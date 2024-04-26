@@ -96,7 +96,7 @@ public class EventController {
     public ResponseEntity<Void> deleteEvent(@PathVariable Long id) {
         return eventService.findById(id)
                 .map(event -> {
-                    eventService.deleteEvent(id);
+                    eventService.deleteEventById(id);
                     return ResponseEntity.ok().<Void>build();
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
@@ -106,7 +106,7 @@ public class EventController {
     @CrossOrigin
     @GetMapping("/search")
     public List<Event> searchEventsByName(@RequestParam String name) {
-        return eventService.findByNameContaining(name);
+        return eventService.findEventsByNameContaining(name);
     }
 
 }

@@ -30,16 +30,16 @@ public class EventService {
 
     // Поиск всех мероприятий
     public List<Event> findAll() {
-        return eventDAO.findAll();
+        return eventDAO.findAllEvents();
     }
 
     // Удаление мероприятия по ID
-    public void deleteEvent(Long id) {
-        eventDAO.deleteById(id);
+    public void deleteEventById(Long id) {
+        eventDAO.deleteEventById(id);
     }
 
     // Поиск мероприятий по имени
-    public List<Event> findByNameContaining(String name) {
+    public List<Event> findEventsByNameContaining(String name) {
         return eventDAO.findByNameContaining(name);
     }
 
