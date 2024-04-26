@@ -38,7 +38,7 @@
 4. Перейти в каталог проекта:
 
     ```
-    cd event-booking-server
+    cd booking-server
     ```
 
 5. Соберать проект с помощью Maven:
